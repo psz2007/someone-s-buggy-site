@@ -1,13 +1,25 @@
-# 网站基本设置 (保留原有的)
-title: 你的数学分析笔记
-# ...
+# ==============================================================================
+# 网站设置 (Site settings) - 必须包含 url 和 baseurl
+# ==============================================================================
+title: "你的数学分析笔记"            # 网站的标题
+description: "Acetaffyqwq的数学分析学习笔记"  # 网站的描述
+url: "https://acetaffyqwq.github.io" 
 
-# 关键配置：配置 Markdown 处理器
+# baseurl 必须是您的仓库名称，这是解决主页空白和链接错误的关键
+baseurl: "/Note-of-math-analysis" 
+
+# ==============================================================================
+# 构建设置 (Build settings) - 包含您的数学公式配置
+# ==============================================================================
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  
+# Kramdown 和 MathJax 配置 (保留了您已有的代码)
 kramdown:
   # 告诉 Kramdown 不要对行内和块级公式进行任何处理。
-  # 这样 $...$ 和 $$...$$ 会被原封不动地传递给浏览器端的 MathJax。
-  parse_block_html: true
+  # 这样 $...$ 和 $$...$$ 会被原封不动地传递给浏览器的 MathJax。
+  parse_block_html: true 
   math_engine: mathjax
   # 禁用自动转义下划线，这是 $...$ 冲突的主要原因
   skip_html_validation: true
