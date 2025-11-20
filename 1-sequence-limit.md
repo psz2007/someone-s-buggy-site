@@ -1,6 +1,8 @@
 ---
 layout: default
-title: sequence-limit
+title: 数列极限
+sort_order: 1
+is_note: true
 ---
 
 ## 无穷小量

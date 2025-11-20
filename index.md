@@ -1,12 +1,22 @@
 ---
 layout: default
-title: 数学分析笔记
+title: 我的数学笔记首页
 ---
 
-# Note-of-math-analysis
+# 学无止境
 
-[数列极限](./1-sequence-limit.html)
+{% assign notes = site.pages | where: "is_note", true | sort: "sort_order" %}
 
-[实数系基本定理&收敛准则](./2-real-number-system.html)
-
-[函数极限](./3-func-limit)
+{% if notes.size > 0 %}
+<ul>
+  {% for note in notes %}
+    <li>
+    <a href="{{ site.baseurl }}{{ note.url }}">
+                {{ note.title }}
+            </a>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+    <p>抱歉，目前还没有任何笔记。</p>
+{% endif %}
