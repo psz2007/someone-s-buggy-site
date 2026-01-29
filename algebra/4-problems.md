@@ -39,8 +39,17 @@ $A=P^TDP$，其中 $D$ 是规范型，那么我们把列向量变成 $P\alpha_1,
 
 那么当然存在 $\beta_3$ 满足 $\beta_3^TD\beta_3=0$ ，令 $\alpha_3=P^{-1}\beta_3$ 即可。
 
-## 正定二次型
+> 有分块对称矩阵 $\begin{pmatrix}A_1 & A_2 \\A_3 & A_4\end{pmatrix}$ ，并且 $A_1$ 可逆，把它合同对角化。
 
-定义如果对于任意 $\alpha\in R^n$，有 $\alpha^TA\alpha>0$ ，那么称 $X^TAX$ 是正定二次型。
+$$
+\begin{pmatrix}A_1 & A_2 \\A_3 & A_4\end{pmatrix}=\begin{pmatrix}A_1 & A_2 \\A_2^T & A_4\end{pmatrix}\simeq\begin{pmatrix}A_1 & 0 \\0 & A_4-A_2A_1^{-1}A_2^T\end{pmatrix}
+$$
 
-其充要条件显然是规范型惯性正指数等于 $n$。
+> 如果 $A$ 是正定矩阵，那么 $A^{-1}$ 也是正定。
+
+$$
+A=P^TIP=P^TP\\
+A^{-1}=P^{-1}(P^{-1})^T
+$$
+
+所以也是正定。
